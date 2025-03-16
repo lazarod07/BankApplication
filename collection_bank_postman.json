@@ -1,0 +1,417 @@
+{
+	"info": {
+		"name": "Cristian David Zapata Lazaro's project",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "endpoints",
+			"description": "",
+			"sort": 2000,
+			"item": [
+				{
+					"name": "Obtener todos los clientes",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/clients",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8001"
+							]
+						}
+					},
+					"sort": 1000
+				},
+				{
+					"name": "Obtener cliente por id",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/clients/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8001"
+							]
+						}
+					},
+					"sort": 2000
+				},
+				{
+					"name": "Crear cliente",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/clients",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8001"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dni\": \"1045753158\",\n\t\"name\": \"Cristian Zapata\",\n    \"password\": \"12345\",\n\t\"gender\": \"Masculino\",\n\t\"age\": 26,\n\t\"address\": \"Calle 1 #2-3\",\n\t\"phone\": \"3205997901\",\n\t\"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"sort": 3000
+				},
+				{
+					"name": "Actualizar cliente",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/clients/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8001"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"dni\": \"1045753158\",\n\t\"name\": \"Cristian Zapata Lazaro\",\n\t\"password\": \"12345\",\n\t\"gender\": \"Masculino\",\n\t\"age\": 26,\n\t\"address\": \"Calle 1 #2-3\",\n\t\"phone\": \"3205997901\",\n\t\"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"sort": 4000
+				},
+				{
+					"name": "Actualizar parcialmente cliente",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/clients/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8001"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"active\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"sort": 5000
+				},
+				{
+					"name": "Eliminar cliente",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/clients/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8001"
+							]
+						}
+					},
+					"sort": 6000
+				},
+				{
+					"name": "Obtener todas las cuentas",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/accounts",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						}
+					},
+					"sort": 7000
+				},
+				{
+					"name": "Obtener cuenta por id",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/accounts/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						}
+					},
+					"sort": 8000
+				},
+				{
+					"name": "Crear cuenta",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/accounts",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": \"9\",\n\t\"type\": \"debito\",\n\t\"initialAmount\": 1000,\n\t\"isActive\": true,\n\t\"clientId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"sort": 9000
+				},
+				{
+					"name": "Actualizar cuenta",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/accounts/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"number\": \"9\",\n\t\"type\": \"credito\",\n\t\"initialAmount\": 1000,\n\t\"clientId\": 2,\n\t\"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"sort": 10000
+				},
+				{
+					"name": "Actualizar parcialmente cuenta",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/accounts/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"active\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"sort": 11000
+				},
+				{
+					"name": "Eliminar cuenta",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/accounts/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						}
+					},
+					"sort": 12000
+				},
+				{
+					"name": "Obtener todass las transaccioness",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/transactions",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						}
+					},
+					"sort": 13000
+				},
+				{
+					"name": "Obtener transccion por id",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/transactions/1",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						}
+					},
+					"sort": 14000
+				},
+				{
+					"name": "Crear una transaccion",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/transactions",
+							"query": [],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2024-03-15T10:30:00\",\n    \"type\": \"DEPOSIT\",\n    \"amount\": -500,\n    \"accountId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"sort": 15000
+				},
+				{
+					"name": "Reporte",
+					"description": "",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/transactions/client/2/report?dateTransactionStart=2024-03-15&dateTransactionEnd=2024-03-16",
+							"query": [
+								{
+									"key": "dateTransactionStart",
+									"value": "2024-03-15",
+									"description": "",
+									"disabled": false
+								},
+								{
+									"key": "dateTransactionEnd",
+									"value": "2024-03-16",
+									"description": "",
+									"disabled": false
+								}
+							],
+							"variable": [],
+							"host": [
+								"localhost:8000"
+							]
+						}
+					},
+					"sort": 16000
+				}
+			]
+		}
+	],
+	"variable": [],
+	"event": [],
+	"auth": {
+		"type": "noauth"
+	}
+}
